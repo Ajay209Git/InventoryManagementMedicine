@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory Management Pro - Download</title>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #4f46e5;
+      --primary-dark: #4338ca;
+      --success: #10b981;
+      --gray-50: #f8fafc;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-300: #cbd5e1;
+      --gray-400: #94a3b8;
+      --gray-500: #64748b;
+      --gray-600: #475569;
+      --gray-700: #334155;
+      --gray-800: #1e293b;
+      --gray-900: #0f172a;
+      --radius: 8px;
+      --radius-lg: 12px;
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    body {
+      font-family: var(--font);
+      background: var(--gray-100);
+      color: var(--gray-800);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    .header {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      padding: 50px 20px 40px;
+      text-align: center;
+    }
+    .header img { height: 64px; width: auto; margin-bottom: 12px; }
+    .header h1 { font-size: 30px; font-weight: 700; }
+    .header p { opacity: 0.85; margin-top: 6px; font-size: 15px; }
+    .container { max-width: 720px; margin: 0 auto; padding: 30px 20px 60px; }
+    .card {
+      background: white; border-radius: var(--radius-lg);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1); padding: 32px;
+      margin-bottom: 24px; border: 1px solid var(--gray-200);
+    }
+    .badge {
+      display: inline-block; padding: 4px 14px; border-radius: 20px;
+      font-size: 13px; font-weight: 600; margin-bottom: 20px;
+    }
+    .badge.primary { background: #dbeafe; color: #1e40af; }
+    .badge.green { background: #d1fae5; color: #065f46; }
+    .dl-area { text-align: center; padding: 20px 0; }
+    .dl-btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--primary); color: white; border: none;
+      padding: 16px 36px; border-radius: var(--radius); font-size: 17px;
+      font-weight: 600; cursor: pointer; text-decoration: none;
+      transition: background 0.15s; margin: 8px;
+    }
+    .dl-btn:hover { background: var(--primary-dark); }
+    .dl-btn svg { width: 20px; height: 20px; }
+    .dl-note { font-size: 13px; color: var(--gray-500); margin-top: 10px; }
+    .features { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 16px 0; }
+    .features li {
+      list-style: none; padding: 8px 12px; background: var(--gray-50);
+      border-radius: var(--radius); font-size: 14px; color: var(--gray-700);
+    }
+    .features li::before { content: "\2713"; color: var(--success); font-weight: 700; margin-right: 6px; }
+    .step { display: flex; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--gray-100); }
+    .step:last-child { border-bottom: none; }
+    .step-num {
+      width: 30px; height: 30px; border-radius: 50%; background: var(--primary);
+      color: white; display: flex; align-items: center; justify-content: center;
+      font-size: 14px; font-weight: 700; flex-shrink: 0;
+    }
+    .changelog-item { padding: 10px 0; border-bottom: 1px solid var(--gray-100); font-size: 14px; }
+    .changelog-item:last-child { border-bottom: none; }
+    .changelog-item .ver { font-weight: 700; color: var(--primary); margin-right: 8px; }
+    .changelog-item .date { color: var(--gray-400); font-size: 12px; }
+    .footer { text-align: center; padding: 20px; font-size: 13px; color: var(--gray-400); }
+    h2 { font-size: 18px; font-weight: 700; margin-bottom: 16px; color: var(--gray-900); }
+    @media (max-width: 600px) { .features { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://raw.githubusercontent.com/YOUR_USERNAME/InventoryManagement/main/img/logo.png" alt="Logo">
+  <h1>Inventory Management Pro</h1>
+  <p>Full-featured inventory system for Windows — Master Data, Purchases, Sales, Reports &amp; more</p>
+</div>
+
+<div class="container">
+
+  <!-- Download -->
+  <div class="card">
+    <div style="text-align:center;">
+      <span class="badge primary">Version 2.0.0</span>
+    </div>
+    <div class="dl-area">
+      <a class="dl-btn" href="https://drive.google.com/your-drive-link-here" target="_blank">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="8 17 12 21 16 17"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.88 18.09A5 5 0 0018 9h-1.26A8 8 0 103 16.29"/></svg>
+        Download Installer (68 MB)
+      </a>
+      <div class="dl-note">Windows 10 / 11 &bull; Silent install &bull; No bloatware</div>
+    </div>
+  </div>
+
+  <!-- Features -->
+  <div class="card">
+    <h2>Features</h2>
+    <ul class="features">
+      <li>Master Data (Items, Categories)</li>
+      <li>Purchase Management</li>
+      <li>Sales &amp; Invoice</li>
+      <li>Financial Year Tracking</li>
+      <li>Stock Reports</li>
+      <li>Day Book &amp; Expiry Reports</li>
+      <li>Export to PDF / Excel / CSV</li>
+      <li>WhatsApp Invoice Sharing</li>
+      <li>Google Sheets Sync</li>
+      <li>90-day Free Trial</li>
+    </ul>
+  </div>
+
+  <!-- Install -->
+  <div class="card">
+    <h2>How to Install</h2>
+    <div class="step">
+      <div class="step-num">1</div>
+      <div>Download the <strong>.exe</strong> file using the button above.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div>Double-click the installer and follow the on-screen instructions.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div>Launch the app from the desktop shortcut. Set up your organization and start using!</div>
+    </div>
+    <div style="margin-top:14px; font-size:13px; color:var(--gray-500);">
+      <strong>Note:</strong> Windows SmartScreen may show a warning since the app is unsigned.
+      Click <strong>"More info"</strong> then <strong>"Run anyway"</strong> to proceed.
+    </div>
+  </div>
+
+  <!-- Changelog -->
+  <div class="card">
+    <h2>What's New</h2>
+    <div class="changelog-item">
+      <span class="ver">v2.0.0</span>
+      <span class="date">May 2026</span>
+      <div style="margin-top:4px; color:var(--gray-600);">
+        &bull; Google Sheets auto-sync<br>
+        &bull; License activation system with Free/Pro/Enterprise tiers<br>
+        &bull; 90-day free trial with expiry lock<br>
+        &bull; Contact &amp; Support page with live config<br>
+        &bull; Org registration with device ID tracking<br>
+        &bull; Alert badge for trial expiry &lt;15 days<br>
+        &bull; Redirect to activation when trial expired
+      </div>
+    </div>
+  </div>
+
+  <!-- Chrome Extension -->
+  <div class="card" style="text-align:center;">
+    <p style="font-size:14px; color:var(--gray-500);">
+      Also available as a Chrome Extension &bull;
+      <a href="https://github.com/YOUR_USERNAME/InventoryManagement" style="color:var(--primary);" target="_blank">View on GitHub</a>
+    </p>
+  </div>
+
+</div>
+
+<div class="footer">
+  &copy; 2026 Inventory Management Pro &bull; Built with Electron
+</div>
+
+</body>
+</html>

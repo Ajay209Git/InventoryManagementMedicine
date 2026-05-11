@@ -46,12 +46,24 @@
       box-shadow: 0 1px 3px rgba(0,0,0,0.1); padding: 32px;
       margin-bottom: 24px; border: 1px solid var(--gray-200);
     }
+    .card.chrome-card {
+      border: 2px solid var(--primary);
+      position: relative;
+    }
+    .card.chrome-card::before {
+      content: "RECOMMENDED";
+      position: absolute; top: -12px; right: 24px;
+      background: var(--success); color: white;
+      font-size: 11px; font-weight: 700; padding: 2px 12px;
+      border-radius: 10px; letter-spacing: 0.5px;
+    }
     .badge {
       display: inline-block; padding: 4px 14px; border-radius: 20px;
       font-size: 13px; font-weight: 600; margin-bottom: 20px;
     }
     .badge.primary { background: #dbeafe; color: #1e40af; }
     .badge.green { background: #d1fae5; color: #065f46; }
+    .badge.amber { background: #fef3c7; color: #92400e; }
     .dl-area { text-align: center; padding: 20px 0; }
     .dl-btn {
       display: inline-flex; align-items: center; gap: 10px;
@@ -62,6 +74,10 @@
     }
     .dl-btn:hover { background: var(--primary-dark); }
     .dl-btn svg { width: 20px; height: 20px; }
+    .dl-btn.secondary { background: var(--gray-700); }
+    .dl-btn.secondary:hover { background: var(--gray-900); }
+    .dl-btn.green { background: #059669; }
+    .dl-btn.green:hover { background: #047857; }
     .dl-note { font-size: 13px; color: var(--gray-500); margin-top: 10px; }
     .features { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 16px 0; }
     .features li {
@@ -82,6 +98,7 @@
     .changelog-item .date { color: var(--gray-400); font-size: 12px; }
     .footer { text-align: center; padding: 20px; font-size: 13px; color: var(--gray-400); }
     h2 { font-size: 18px; font-weight: 700; margin-bottom: 16px; color: var(--gray-900); }
+    .platform-label { font-size: 14px; font-weight: 600; color: var(--gray-600); margin-bottom: 4px; }
     @media (max-width: 600px) { .features { grid-template-columns: 1fr; } }
   </style>
 </head>
@@ -90,28 +107,23 @@
 <div class="header">
   <img src="https://raw.githubusercontent.com/Ajay209Git/InventoryManagementMedicine/refs/heads/main/logo.png" alt="Logo">
   <h1>Inventory Management Pro</h1>
-  <p>Full-featured inventory system for Windows — Master Data, Purchases, Sales, Reports &amp; more</p>
+  <p>Full-featured inventory system — Master Data, Purchases, Sales, Reports &amp; more</p>
 </div>
 
 <div class="container">
 
-  <!-- Download -->
-  <div class="card">
+  <!-- Chrome Extension (Recommended) -->
+  <div class="card chrome-card">
     <div style="text-align:center;">
-      <span class="badge primary">Version 2.0.0</span>
+      <span class="badge green">Free &bull; No install needed</span>
     </div>
     <div class="dl-area">
-      <a class="dl-btn" href="https://drive.google.com/file/d/1RF3BikR2i9D-zjWI-QwSmvheRPQoOUy6/view?usp=drive_link" target="_blank">
+      <a class="dl-btn green" href="https://chromewebstore.google.com/detail/inventory-management-pro/hcppojjmlgimkmilmdchpgbmeipmeief" target="_blank">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="8 17 12 21 16 17"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.88 18.09A5 5 0 0018 9h-1.26A8 8 0 103 16.29"/></svg>
-        Download Installer (68 MB)
+        Add to Chrome &mdash; Free
       </a>
-      <div class="dl-note">Windows 10 / 11 &bull;  No bloatware</div>
+      <div class="dl-note">Works in Chrome browser &bull; No download required &bull; Auto-updates</div>
     </div>
-  </div>
-
-  <!-- Features -->
-  <div class="card">
-    <h2>Features</h2>
     <ul class="features">
       <li>Master Data (Items, Categories)</li>
       <li>Purchase Management</li>
@@ -125,9 +137,24 @@
     </ul>
   </div>
 
-  <!-- Install -->
+  <!-- Windows Desktop App -->
   <div class="card">
-    <h2>How to Install</h2>
+    <div style="text-align:center;">
+      <span class="badge amber">Standalone Desktop App</span>
+    </div>
+    <div class="platform-label">Windows 10 / 11</div>
+    <div class="dl-area">
+      <a class="dl-btn" href="https://drive.google.com/file/d/1RF3BikR2i9D-zjWI-QwSmvheRPQoOUy6/view?usp=drive_link" target="_blank">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="8 17 12 21 16 17"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.88 18.09A5 5 0 0018 9h-1.26A8 8 0 103 16.29"/></svg>
+        Download Installer (68 MB)
+      </a>
+      <div class="dl-note">No bloatware &bull; Runs offline &bull; Works without Chrome</div>
+    </div>
+  </div>
+
+  <!-- Install Steps -->
+  <div class="card">
+    <h2>How to Install (Desktop App)</h2>
     <div class="step">
       <div class="step-num">1</div>
       <div>Download the <strong>.exe</strong> file using the button above.</div>
@@ -148,34 +175,34 @@
 
   <!-- Changelog -->
   <div class="card">
-    <h2>What's New</h2>
+    <h2>What's New in v2.0.0</h2>
     <div class="changelog-item">
       <span class="ver">v2.0.0</span>
       <span class="date">May 2026</span>
       <div style="margin-top:4px; color:var(--gray-600);">
-        
         &bull; License activation system with Free/Pro/Enterprise tiers<br>
         &bull; 90-day free trial with expiry lock<br>
         &bull; Contact &amp; Support page with live config<br>
         &bull; Org registration with device ID tracking<br>
         &bull; Alert badge for trial expiry &lt;15 days<br>
-        &bull; Redirect to activation when trial expired
+        &bull; In-app update notifications<br>
+        &bull; Google Sheets sync backup
       </div>
     </div>
   </div>
 
-  <!-- Chrome Extension -->
+  <!-- GitHub -->
   <div class="card" style="text-align:center;">
     <p style="font-size:14px; color:var(--gray-500);">
-      Also available as a Chrome Extension &bull;
-      <a href="https://github.com/YOUR_USERNAME/InventoryManagement" style="color:var(--primary);" target="_blank">View on GitHub</a>
+      Open source &bull;
+      <a href="https://github.com/Ajay209Git/InventoryManagementMedicine" style="color:var(--primary);" target="_blank">View on GitHub</a>
     </p>
   </div>
 
 </div>
 
 <div class="footer">
-  &copy; 2026 Inventory Management Pro &bull; Built with Electron
+  &copy; 2026 Inventory Management Pro &bull; Published by Saarthi Technologies
 </div>
 
 </body>
